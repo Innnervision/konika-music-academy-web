@@ -18,21 +18,57 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Konika Music Academy — Classical vocal, Rabindra Sangeet, guitar, keyboard & music learning platform by Universe Invedors. Learn on web or download the Android app on Google Play.">
+  <meta property="og:title" content="Konika Music Academy — Official Music Learning Platform | Universe Invedors">
+  <meta property="og:description" content="Learn Indian classical vocal, instruments, and music theory online or on the Konika Music Academy Android app.">
+  <meta property="og:url" content="https://konikamusic.com/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://konikamusic.com/">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="konika_music_academy">
+  <meta name="apple-mobile-web-app-title" content="Konika Music Academy">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>konika_music_academy</title>
+  <title>Konika Music Academy — Music Learning & Android App</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    #kma-play-cta {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 99999;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1b5e20, #2e7d32);
+      color: #ffffff;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    #kma-play-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    }
+  </style>
 </head>
 <body>
+  <a id="kma-play-cta" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer" aria-label="Download Konika Music Academy on Google Play">
+    <span>▶</span>
+    <span>Get Music App on Google Play</span>
+  </a>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
