@@ -1,74 +1,594 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Konika Music Academy — Classical vocal, Rabindra Sangeet, guitar, keyboard & music learning platform by Universe Invedors. Learn on web or download the Android app on Google Play.">
-  <meta property="og:title" content="Konika Music Academy — Official Music Learning Platform | Universe Invedors">
-  <meta property="og:description" content="Learn Indian classical vocal, instruments, and music theory online or on the Konika Music Academy Android app.">
-  <meta property="og:url" content="https://konikamusic.com/">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://konikamusic.com/">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Konika Music Academy">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Konika Music Academy — Music Learning & Android App</title>
-  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#140e0a" />
+  <title>Konika Music Academy &amp; Konika Mukherjee | Indian Classical Vocal, Rabindra Sangeet &amp; Executive Leadership</title>
+  <meta name="description" content="Konika Music Academy, founded by Konika Mukherjee (CEO, Universe Invedors) — conservatory-grade training in Hindustani Classical Vocal, Rabindra Sangeet, Harmonium, Keyboard &amp; Guitar with live Shruti/Sargam practice tools, transparent fees, and trial-class enrolment." />
+  <link rel="canonical" href="https://konika.universeinvedors.tech/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Konika Music Academy — Conservatory Music Education &amp; Executive Profile" />
+  <meta property="og:description" content="Experience interactive Sargam, Tanpura Shruti &amp; Tala practice tools, explore Hindustani Classical &amp; Rabindra Sangeet courses, and book a trial class." />
+  <meta property="og:url" content="https://konika.universeinvedors.tech/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Konika Music Academy | Classical Vocal, Instruments &amp; Trial Classes" />
+  <meta name="twitter:description" content="Founded by Konika Mukherjee (CEO, Universe Invedors). Online &amp; offline conservatory music programmes in Bengali, Hindi &amp; English." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "Konika Music Academy",
+        "url": "https://konika.universeinvedors.tech/",
+        "description": "Conservatory-style Indian classical vocal, Rabindra Sangeet, keyboard, harmonium, and guitar academy offering live online and classroom instruction in Bengali, Hindi, and English.",
+        "founder": {
+          "@type": "Person",
+          "name": "Konika Mukherjee",
+          "jobTitle": "Founder & Principal Educator, Konika Music Academy; Chief Executive Officer (CEO), Universe Invedors",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Universe Invedors",
+            "url": "https://company.universeinvedors.tech/"
+          }
+        },
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Universe Invedors",
+          "url": "https://universeinvedors.tech/"
+        },
+        "sameAs": [
+          "https://innnervision.github.io/konika-music-academy-web/",
+          "https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy",
+          "https://company.universeinvedors.tech/"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can beginners and children book a trial music class before enrolling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Prospective students and parents can book an introductory assessment and trial session to experience our vocal or instrumental teaching methodology before choosing a monthly course batch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "In which languages are classes taught at Konika Music Academy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Instruction is available in Bengali (বাংলা), Hindi (हिन्दी), and English across both live online batches and offline studio sessions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Konika Music Academy protect young learners' privacy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All enrolments for learners under 18 require explicit parent or guardian consent. Student practice data is never sold, and the interactive browser practice tools run locally on the learner's device."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
-    #kma-play-cta {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      z-index: 99999;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #1b5e20, #2e7d32);
-      color: #ffffff;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    :root {
+      --bg: #120d0a;
+      --surface: #1d1510;
+      --surface-2: #281d16;
+      --brass: #e4b660;
+      --amber: #c98a2c;
+      --cream: #fbf6ee;
+      --muted: #d5c5b3;
+      --line: rgba(228, 182, 96, 0.25);
+      --emerald: #2e9e6b;
     }
-    #kma-play-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: radial-gradient(ellipse 75% 45% at 80% 0%, rgba(201, 138, 44, 0.16), transparent 65%), var(--bg);
+      color: var(--cream);
+      font: 16px/1.68 'Plus Jakarta Sans', 'Hind Siliguri', system-ui, sans-serif;
     }
+    a { color: var(--brass); }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid var(--brass); outline-offset: 3px;
+    }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: 0 20px; }
+    header.topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(18, 13, 10, 0.94); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line); padding: 12px 0;
+    }
+    .nav-flex { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .brand {
+      font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-weight: 700;
+      color: var(--brass); text-decoration: none; letter-spacing: 0.03em;
+    }
+    .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+    .nav-links a:hover { color: var(--cream); }
+    .lang-pill {
+      min-height: 40px; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--surface); color: var(--cream);
+      font-size: 0.85rem; font-weight: 600; cursor: pointer;
+    }
+    .lang-pill[aria-pressed="true"] { background: var(--brass); color: #191008; border-color: var(--brass); }
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 36px;
+      align-items: center; padding: 48px 0 38px;
+    }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    .eyebrow { color: var(--brass); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.2rem, 4.5vw, 3.6rem); line-height: 1.1; margin-bottom: 14px; color: var(--cream); }
+    h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.4rem); color: var(--brass); margin-bottom: 10px; }
+    h3 { font-size: 1.14rem; color: var(--cream); margin-bottom: 6px; }
+    .lead { font-size: 1.05rem; color: var(--muted); margin-bottom: 20px; max-width: 62ch; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 10px 20px; border-radius: 10px; font-weight: 700;
+      font-size: 0.95rem; text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    }
+    .btn-brass { background: var(--brass); color: #181008; }
+    .btn-outline { background: var(--surface); color: var(--cream); border-color: var(--line); }
+    .btn-playstore { background: #1e6b43; color: #fff; border-color: #34d399; }
+    .riyaz-box {
+      background: linear-gradient(155deg, #261b14, #150f0b);
+      border: 1px solid var(--line); border-radius: 18px; padding: 22px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+    }
+    .swara-row { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; margin: 14px 0; }
+    @media (max-width: 520px) { .swara-row { grid-template-columns: repeat(4, 1fr); } }
+    .swara-btn {
+      min-height: 52px; border-radius: 10px; border: 1px solid var(--line);
+      background: var(--surface); color: var(--cream); font-weight: 700; cursor: pointer;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.92rem;
+    }
+    .swara-btn small { font-size: 0.68rem; color: var(--brass); font-weight: 500; }
+    .swara-btn:hover, .swara-btn.active { background: var(--brass); color: #181008; }
+    .swara-btn:hover small, .swara-btn.active small { color: #181008; }
+    section.block { padding: 42px 0; border-top: 1px solid var(--line); }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 18px; }
+    .card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+      padding: 20px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .fee { font-size: 1.35rem; font-weight: 800; color: var(--brass); }
+    .tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; background: var(--surface-2); border: 1px solid var(--line); color: var(--brass); width: fit-content; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 12px; }
+    label { display: block; font-size: 0.86rem; color: var(--brass); font-weight: 600; margin-bottom: 4px; }
+    input, select, textarea {
+      width: 100%; min-height: 46px; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid var(--line); background: #0e0a07; color: var(--cream); font-size: 0.95rem;
+    }
+    .beat-dots { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .beat-dot {
+      width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line);
+      display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; color: var(--muted);
+    }
+    .beat-dot.on { background: var(--brass); color: #181008; font-weight: 800; border-color: var(--brass); }
+    footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
   </style>
 </head>
 <body>
-  <a id="kma-play-cta" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer" aria-label="Download Konika Music Academy on Google Play">
-    <span>▶</span>
-    <span>Get Music App on Google Play</span>
-  </a>
-  <script src="flutter_bootstrap.js" async></script>
+  <div id="conservatory-shell">
+    <header class="topbar">
+      <div class="wrap nav-flex">
+        <a class="brand" href="#top">&#x1F3B6; KONIKA MUSIC ACADEMY</a>
+        <nav class="nav-links" aria-label="Academy navigation">
+          <a href="#riyaz-studio">Live Riyaz Tool</a>
+          <a href="#courses">Courses &amp; Fees</a>
+          <a href="#leadership">Executive Brand</a>
+          <a href="#enrol">Book Trial Class</a>
+          <button type="button" class="lang-pill" data-kma-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-pill" data-kma-lang="bn" aria-pressed="false">&#x09AC;&#x09BE;&#x0982;&#x09B2;&#x09BE;</button>
+          <button type="button" class="lang-pill" data-kma-lang="hi" aria-pressed="false">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="wrap">
+      <section class="hero" aria-labelledby="kma-hero-title">
+        <div>
+          <p class="eyebrow" id="kma-eyebrow">CLASSICAL CONSERVATORY &amp; EXECUTIVE ARTISTIC LEADERSHIP</p>
+          <h1 id="kma-hero-title">Where Traditional Raga Discipline Meets Modern Musical Mastery.</h1>
+          <p class="lead" id="kma-lead">Founded by <strong>Konika Mukherjee</strong> (Chief Executive Officer, Universe Invedors &amp; Principal Music Educator), Konika Music Academy nurtures vocalists and instrumentalists across Hindustani Classical, Rabindra Sangeet, Harmonium, Keyboard, and Guitar &mdash; with structured syllabus progression, live online &amp; studio batches, and interactive pitch/rhythm practice tools.</p>
+          <div class="btn-row">
+            <a class="btn btn-brass" href="#enrol">Book a Trial Class</a>
+            <a class="btn btn-playstore" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer">&#9654; Android App on Google Play</a>
+            <button type="button" class="btn btn-outline" onclick="launchFlutterAcademy()">&#x1F3B9; Launch Full Interactive Classroom App</button>
+          </div>
+        </div>
+
+        <aside class="riyaz-box" id="riyaz-studio" aria-labelledby="riyaz-heading">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span class="tag">EXPERIENCE BEFORE ENROLLING</span>
+            <span id="pitchReadout" style="font-size:0.82rem;color:var(--brass);font-weight:700;">Tonic Sa: C# (277.2 Hz)</span>
+          </div>
+          <h3 id="riyaz-heading" style="margin-top:8px;">Interactive Shruti Tanpura, Sargam &amp; Tala Studio</h3>
+          <p style="font-size:0.88rem;color:var(--muted);">Practice vocal pitch matching (Swara Sadhana) and classical rhythm cycles right in your browser using pure Web Audio synthesis.</p>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center;">
+            <label for="shrutiScale" style="margin:0;">Scale (Sa):</label>
+            <select id="shrutiScale" style="width:auto;min-height:40px;padding:4px 10px;">
+              <option value="261.63">C (Safed 1 &bull; 261.6 Hz)</option>
+              <option value="277.18" selected>C# (Kali 1 &bull; 277.2 Hz &mdash; Female/Youth Vocal)</option>
+              <option value="293.66">D (Safed 2 &bull; 293.7 Hz)</option>
+              <option value="392.00">G (Safed 5 &bull; 392.0 Hz)</option>
+              <option value="440.00">A (Safed 6 &bull; 440.0 Hz)</option>
+            </select>
+            <button type="button" class="lang-pill" id="droneToggleBtn">&#9654; Tanpura Drone: OFF</button>
+          </div>
+
+          <div class="swara-row" role="group" aria-label="Sargam pitch reference keys">
+            <button type="button" class="swara-btn" data-ratio="1">Sa<small>Shadja</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.12246">Re<small>Rishabh</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.25992">Ga<small>Gandhar</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.33484">Ma<small>Madhyam</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.49831">Pa<small>Pancham</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.68179">Dha<small>Dhaivat</small></button>
+            <button type="button" class="swara-btn" data-ratio="1.88775">Ni<small>Nishad</small></button>
+            <button type="button" class="swara-btn" data-ratio="2">Sa&prime;<small>Taar Sa</small></button>
+          </div>
+
+          <div style="border-top:1px solid var(--line);padding-top:12px;margin-top:8px;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+              <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+                <label for="talaSelect" style="margin:0;">Tala:</label>
+                <select id="talaSelect" style="width:auto;min-height:38px;padding:4px 10px;">
+                  <option value="16">Teentaal (16 Matra &bull; 4+4+4+4)</option>
+                  <option value="6">Dadra (6 Matra &bull; 3+3 &mdash; Rabindra Sangeet)</option>
+                  <option value="8">Keherwa (8 Matra &bull; 4+4)</option>
+                </select>
+                <label for="talaBpm" style="margin:0;">BPM:</label>
+                <input type="number" id="talaBpm" value="96" min="48" max="180" style="width:76px;min-height:38px;padding:4px 8px;" />
+              </div>
+              <button type="button" class="lang-pill" id="talaToggleBtn">&#9654; Start Tala</button>
+            </div>
+            <div class="beat-dots" id="beatDots" aria-live="off"></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="block" id="courses" aria-labelledby="courses-heading">
+        <h2 id="courses-heading">Structured Conservatory Programmes, Schedules &amp; Transparent Fees</h2>
+        <p class="lead">Small-cohort live online batches and studio classes in Bengali, Hindi, and English &mdash; designed for beginners, graded exam candidates, and serious performers.</p>
+        <div class="grid-3">
+          <article class="card">
+            <span class="tag">VOCAL FOUNDATION &amp; RAGA</span>
+            <h3>Hindustani Classical Vocal</h3>
+            <div class="fee">&#x20B9;1,600 <span style="font-size:0.88rem;color:var(--muted);">/ month ($28 Intl) &bull; 2 classes/wk</span></div>
+            <p style="color:var(--muted);">Voice culture (Akar &amp; Alankar), Shruti accuracy, Yaman/Bhairav/Bihag Bandishes, Taans, and graded diploma preparation.</p>
+            <p style="font-size:0.85rem;color:var(--brass);">Batches: Tue &amp; Fri (6:30 PM IST) / Sun Morning</p>
+          </article>
+          <article class="card">
+            <span class="tag">BENGALI HERITAGE</span>
+            <h3>Rabindra Sangeet &amp; Nazrul Geeti</h3>
+            <div class="fee">&#x20B9;1,500 <span style="font-size:0.88rem;color:var(--muted);">/ month ($25 Intl) &bull; 2 classes/wk</span></div>
+            <p style="color:var(--muted);">Authentic Swaralipi notation reading, Sahitya bhava (poetic diction), Prem/Puja/Prakriti parjay repertoire, and Dadra/Teora/Jhaptal mastery.</p>
+            <p style="font-size:0.85rem;color:var(--brass);">Batches: Wed &amp; Sat (7:00 PM IST)</p>
+          </article>
+          <article class="card">
+            <span class="tag">INSTRUMENTAL &amp; ACCOMPANIMENT</span>
+            <h3>Harmonium, Keyboard &amp; Acoustic Guitar</h3>
+            <div class="fee">&#x20B9;1,800 <span style="font-size:0.88rem;color:var(--muted);">/ month ($30 Intl) &bull; 2 classes/wk</span></div>
+            <p style="color:var(--muted);">Fingering agility, chord harmony, staff &amp; Sargam notation, self-accompaniment for vocalists, and ensemble performance readiness.</p>
+            <p style="font-size:0.85rem;color:var(--brass);">Batches: Thu &amp; Sun (5:30 PM IST)</p>
+          </article>
+          <article class="card">
+            <span class="tag">AGES 6&ndash;14 &bull; PARENT-FRIENDLY</span>
+            <h3>Young Musicians Foundation</h3>
+            <div class="fee">&#x20B9;1,200 <span style="font-size:0.88rem;color:var(--muted);">/ month ($22 Intl) &bull; 2 classes/wk</span></div>
+            <p style="color:var(--muted);">Joyful ear training, Sargam games, patriotic &amp; seasonal songs, rhythm clapping, and stage confidence in a safe, moderated classroom.</p>
+            <p style="font-size:0.85rem;color:var(--brass);">Batches: Sat &amp; Sun (10:30 AM IST)</p>
+          </article>
+          <article class="card">
+            <span class="tag">1-ON-1 MENTORSHIP</span>
+            <h3>Individual Audition &amp; Recital Coaching</h3>
+            <div class="fee">&#x20B9;3,200 <span style="font-size:0.88rem;color:var(--muted);">/ 4 private sessions ($55 Intl)</span></div>
+            <p style="color:var(--muted);">Personalized vocal diagnostics, microphone technique, stage repertoire curation, and studio recording preparation.</p>
+            <p style="font-size:0.85rem;color:var(--brass);">Flexible appointment slots</p>
+          </article>
+          <article class="card">
+            <span class="tag">CULTURAL &amp; CORPORATE</span>
+            <h3>Live Recitals, Workshops &amp; Partnerships</h3>
+            <div class="fee">Custom Engagement</div>
+            <p style="color:var(--muted);">Classical &amp; Rabindra Sangeet recitals, institutional music-education partnerships, cultural festival curation, and corporate wellness workshops.</p>
+            <a href="#enrol" style="font-weight:700;">Request Event / Partnership Proposal &rarr;</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="leadership" aria-labelledby="leader-heading">
+        <h2 id="leader-heading">Konika Mukherjee &mdash; Executive Brand &amp; Artistic Vision</h2>
+        <div class="grid-3">
+          <article class="card" style="grid-column: span 2;">
+            <span class="tag">CEO, UNIVERSE INVEDORS &bull; FOUNDER, KONIKA MUSIC ACADEMY</span>
+            <h3>Bridging Classical Cultural Heritage &amp; Accessible Digital Learning</h3>
+            <p style="color:var(--muted);">As Chief Executive Officer of <strong>Universe Invedors</strong> and Founder of <strong>Konika Music Academy</strong>, Konika Mukherjee leads the intersection of Indian classical arts education and human-centered learning technology. Under her stewardship, Konika Music Academy pairs time-honored Guru-Shishya vocal pedagogy with accessible mobile and web practice instruments &mdash; enabling students across Kolkata, India, and the global diaspora to sustain daily Riyaz with discipline and joy.</p>
+            <div class="btn-row" style="margin-top:8px;">
+              <a class="btn btn-outline" href="https://company.universeinvedors.tech/" target="_blank" rel="noopener noreferrer">Universe Invedors Corporate Profile</a>
+              <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer">Verified Google Play App</a>
+            </div>
+          </article>
+          <article class="card">
+            <span class="tag">INSTITUTIONAL STANDARDS</span>
+            <h3>Child Safety &amp; Academic Integrity</h3>
+            <p style="color:var(--muted);">Every minor's enrolment requires verified parent/guardian consent. Live sessions are educator-moderated, fees are published transparently up front, and practice tools run locally in your browser with zero invasive tracking.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block" id="enrol" aria-labelledby="enrol-heading">
+        <h2 id="enrol-heading">Book a Trial Class, Student Enrolment or Cultural Engagement</h2>
+        <p class="lead">Submit your enquiry below to schedule your trial session or partnership discussion directly with the Academy admissions desk.</p>
+        <form class="card" onsubmit="submitKmaEnquiry(event)">
+          <div class="form-grid">
+            <div>
+              <label for="kmaName">Student / Contact Name *</label>
+              <input id="kmaName" required placeholder="e.g., Rituparna Sen" />
+            </div>
+            <div>
+              <label for="kmaType">Enquiry Type *</label>
+              <select id="kmaType">
+                <option value="Trial Class Booking">Book Introductory Trial Class</option>
+                <option value="Course Enrolment">Direct Course Enrolment</option>
+                <option value="Cultural / Event Performance">Cultural Recital / Event Invitation</option>
+                <option value="Institutional / Corporate Partnership">Institutional / Executive Partnership</option>
+              </select>
+            </div>
+            <div>
+              <label for="kmaCourse">Preferred Programme</label>
+              <select id="kmaCourse">
+                <option>Hindustani Classical Vocal (₹1,600/mo)</option>
+                <option>Rabindra Sangeet &amp; Nazrul Geeti (₹1,500/mo)</option>
+                <option>Harmonium / Keyboard / Guitar (₹1,800/mo)</option>
+                <option>Young Musicians Foundation — Ages 6–14 (₹1,200/mo)</option>
+                <option>1-on-1 Recital / Audition Mentorship</option>
+                <option>Executive / Cultural Partnership</option>
+              </select>
+            </div>
+            <div>
+              <label for="kmaMode">Learning Mode &amp; Language</label>
+              <select id="kmaMode">
+                <option>Live Online &mdash; Bengali (বাংলা)</option>
+                <option>Live Online &mdash; English</option>
+                <option>Live Online &mdash; Hindi (हिन्दी)</option>
+                <option>Offline Classroom Batch (West Bengal)</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <label for="kmaNotes">Musical Background, Student Age Group &amp; Preferred Days</label>
+            <textarea id="kmaNotes" rows="3" placeholder="Tell us about prior musical training (if any), age group, and preferred batch timing..."></textarea>
+          </div>
+          <label style="display:flex;align-items:flex-start;gap:10px;margin-top:12px;color:var(--muted);font-weight:400;cursor:pointer;">
+            <input type="checkbox" id="kmaConsent" required style="width:20px;min-height:20px;margin-top:3px;" />
+            <span>I confirm that if this enquiry is for a learner under 18 years of age, I am the parent or legal guardian providing consent for trial-class communication.</span>
+          </label>
+          <div class="btn-row" style="margin-top:12px;">
+            <button type="submit" class="btn btn-brass">Send Trial / Enrolment Request</button>
+            <a class="btn btn-outline" href="mailto:contact@universeinvedors.tech?subject=Konika%20Music%20Academy%20Enquiry">Email Admissions Desk</a>
+          </div>
+          <p id="kmaStatus" style="color:#6ee7b7;font-size:0.9rem;display:none;" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div>
+          <strong style="color:var(--brass);">Konika Music Academy</strong> &bull; Founded by Konika Mukherjee (CEO, Universe Invedors)<br />
+           Hindustani Classical &bull; Rabindra Sangeet &bull; Instrumental Conservatory &bull; Online Worldwide &amp; India
+        </div>
+        <div>
+          <a href="https://company.universeinvedors.tech/">Universe Invedors</a> &bull;
+          <a href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer">Google Play App</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const i18n = {
+        en: {
+          eyebrow: "CLASSICAL CONSERVATORY & EXECUTIVE ARTISTIC LEADERSHIP",
+          title: "Where Traditional Raga Discipline Meets Modern Musical Mastery.",
+          lead: "Founded by Konika Mukherjee (Chief Executive Officer, Universe Invedors & Principal Music Educator), Konika Music Academy nurtures vocalists and instrumentalists across Hindustani Classical, Rabindra Sangeet, Harmonium, Keyboard, and Guitar — with structured syllabus progression, live online & studio batches, and interactive pitch/rhythm practice tools."
+        },
+        bn: {
+          eyebrow: "শাস্ত্রীয় সংগীত শিক্ষাকেন্দ্র ও প্রাতিষ্ঠানিক নেতৃত্ব",
+          title: "প্রথাগত রাগসংগীতের সাধনা ও আধুনিক সংগীত শিক্ষার অপূর্ব মেলবন্ধন।",
+          lead: "কণিকা মুখার্জী (সিইও, ইউনিভার্স ইনভেডরস ও প্রতিষ্ঠাতা অধ্যক্ষা) প্রতিষ্ঠিত কণিকা মিউজিক অ্যাকাডেমিতে হিন্দুস্তানি শাস্ত্রীয় কণ্ঠসংগীত, রবীন্দ্রসংগীত, নজরুলগীতি, হারমোনিয়াম, কিবোর্ড ও গিটারের সুশৃঙ্খল অনলাইন ও স্টুডিও প্রশিক্ষণ দেওয়া হয়।"
+        },
+        hi: {
+          eyebrow: "शास्त्रीय संगीत अकादमी एवं कार्यकारी कलात्मक नेतृत्व",
+          title: "जहाँ पारंपरिक राग साधना और आधुनिक संगीत शिक्षण का संगम होता है।",
+          lead: "कनिका मुखर्जी (सीईओ, यूनिवर्स इन्वेडर्स एवं संस्थापक आचार्या) द्वारा स्थापित कनिका म्यूज़िक अकादमी में हिंदुस्तानी शास्त्रीय गायन, रवींद्र संगीत, हारमोनियम, कीबोर्ड और गिटार की संरचित ऑनलाइन व स्टूडियो शिक्षा प्रदान की जाती है।"
+        }
+      };
+      document.querySelectorAll("[data-kma-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const lang = btn.getAttribute("data-kma-lang") || "en";
+          document.documentElement.setAttribute("lang", lang);
+          document.querySelectorAll("[data-kma-lang]").forEach(function (b) {
+            b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+          });
+          const t = i18n[lang] || i18n.en;
+          document.getElementById("kma-eyebrow").textContent = t.eyebrow;
+          document.getElementById("kma-hero-title").textContent = t.title;
+          document.getElementById("kma-lead").textContent = t.lead;
+        });
+      });
+
+      // Web Audio Shruti Drone + Sargam + Tala Studio
+      let audioCtx = null;
+      let droneNodes = null;
+      function ensureAudio() {
+        if (!audioCtx) {
+          const AC = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AC();
+        }
+        if (audioCtx.state === "suspended") audioCtx.resume();
+        return audioCtx;
+      }
+      function baseSa() {
+        return parseFloat(document.getElementById("shrutiScale").value) || 277.18;
+      }
+      function updateScaleReadout() {
+        const sel = document.getElementById("shrutiScale");
+        document.getElementById("pitchReadout").textContent = "Tonic Sa: " + sel.options[sel.selectedIndex].text.split("•")[0].trim() + " (" + baseSa().toFixed(1) + " Hz)";
+        if (droneNodes) { stopDrone(); startDrone(); }
+      }
+      document.getElementById("shrutiScale").addEventListener("change", updateScaleReadout);
+
+      function startDrone() {
+        const ctx = ensureAudio();
+        const sa = baseSa();
+        const master = ctx.createGain();
+        master.gain.value = 0.08;
+        master.connect(ctx.destination);
+        const freqs = [sa * 0.5, sa, sa * 1.49831, sa * 2];
+        const oscs = freqs.map(function (f, i) {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = i % 2 === 0 ? "triangle" : "sine";
+          o.frequency.value = f;
+          g.gain.value = i === 1 ? 0.45 : 0.22;
+          o.connect(g); g.connect(master); o.start();
+          return o;
+        });
+        droneNodes = { oscs: oscs, master: master };
+        const btn = document.getElementById("droneToggleBtn");
+        btn.textContent = "■ Tanpura Drone: ON";
+        btn.setAttribute("aria-pressed", "true");
+      }
+      function stopDrone() {
+        if (!droneNodes) return;
+        droneNodes.oscs.forEach(function (o) { try { o.stop(); } catch (_) {} });
+        droneNodes.master.disconnect();
+        droneNodes = null;
+        const btn = document.getElementById("droneToggleBtn");
+        btn.textContent = "▶ Tanpura Drone: OFF";
+        btn.setAttribute("aria-pressed", "false");
+      }
+      document.getElementById("droneToggleBtn").addEventListener("click", function () {
+        if (droneNodes) stopDrone(); else startDrone();
+      });
+
+      document.querySelectorAll(".swara-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const ctx = ensureAudio();
+          const freq = baseSa() * parseFloat(btn.getAttribute("data-ratio") || "1");
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = "triangle";
+          o.frequency.value = freq;
+          g.gain.setValueAtTime(0.001, ctx.currentTime);
+          g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.03);
+          g.gain.exponentialRampToValueAtTime(0.0008, ctx.currentTime + 0.75);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(); o.stop(ctx.currentTime + 0.78);
+          document.getElementById("pitchReadout").textContent = btn.firstChild.textContent + " — " + freq.toFixed(1) + " Hz";
+          btn.classList.add("active");
+          setTimeout(function () { btn.classList.remove("active"); }, 350);
+        });
+      });
+
+      // Tala Metronome
+      let talaTimer = null;
+      let beatIdx = 0;
+      function renderBeats() {
+        const total = parseInt(document.getElementById("talaSelect").value, 10) || 16;
+        const wrap = document.getElementById("beatDots");
+        wrap.innerHTML = "";
+        for (let i = 1; i <= total; i++) {
+          const d = document.createElement("span");
+          d.className = "beat-dot";
+          d.textContent = i === 1 ? "X" : String(i);
+          wrap.appendChild(d);
+        }
+      }
+      renderBeats();
+      document.getElementById("talaSelect").addEventListener("change", function () {
+        beatIdx = 0; renderBeats();
+      });
+
+      function tickTala() {
+        const ctx = ensureAudio();
+        const total = parseInt(document.getElementById("talaSelect").value, 10) || 16;
+        const dots = document.querySelectorAll("#beatDots .beat-dot");
+        dots.forEach(function (d, idx) { d.classList.toggle("on", idx === beatIdx); });
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = "sine";
+        o.frequency.value = beatIdx === 0 ? 880 : (beatIdx % 4 === 0 ? 660 : 480);
+        g.gain.setValueAtTime(0.16, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.09);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(); o.stop(ctx.currentTime + 0.1);
+        beatIdx = (beatIdx + 1) % total;
+      }
+
+      document.getElementById("talaToggleBtn").addEventListener("click", function () {
+        const btn = document.getElementById("talaToggleBtn");
+        if (talaTimer) {
+          clearInterval(talaTimer);
+          talaTimer = null;
+          btn.textContent = "▶ Start Tala";
+          btn.setAttribute("aria-pressed", "false");
+          return;
+        }
+        const bpm = Math.min(180, Math.max(48, parseInt(document.getElementById("talaBpm").value, 10) || 96));
+        beatIdx = 0;
+        tickTala();
+        talaTimer = setInterval(tickTala, Math.round(60000 / bpm));
+        btn.textContent = "■ Stop Tala";
+        btn.setAttribute("aria-pressed", "true");
+      });
+
+      window.submitKmaEnquiry = function (e) {
+        e.preventDefault();
+        const name = document.getElementById("kmaName").value.trim();
+        const type = document.getElementById("kmaType").value;
+        const course = document.getElementById("kmaCourse").value;
+        const mode = document.getElementById("kmaMode").value;
+        const notes = document.getElementById("kmaNotes").value.trim();
+        const body = "Namaskar Konika Music Academy,\n\n" +
+          "Enquiry Type: " + type + "\nStudent / Contact: " + name + "\nProgramme: " + course + "\nMode & Language: " + mode +
+          (notes ? "\nDetails: " + notes : "") + "\nGuardian Consent Verified: Yes";
+        const st = document.getElementById("kmaStatus");
+        st.style.display = "block";
+        st.textContent = "Opening your pre-filled trial/enrolment request...";
+        window.location.href = "mailto:contact@universeinvedors.tech?subject=" + encodeURIComponent("Konika Music Academy — " + type + " (" + name + ")") + "&body=" + encodeURIComponent(body);
+      };
+
+      let flutterBooted = false;
+      window.launchFlutterAcademy = function () {
+        if (flutterBooted) return;
+        flutterBooted = true;
+        document.getElementById("conservatory-shell").style.display = "none";
+        const s = document.createElement("script");
+        s.src = "flutter_bootstrap.js";
+        s.async = true;
+        document.body.appendChild(s);
+      };
+    })();
+  </script>
 </body>
 </html>
+
