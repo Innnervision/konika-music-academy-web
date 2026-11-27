@@ -96,11 +96,12 @@
       --emerald: #2e9e6b;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: clip; }
     body {
       background: radial-gradient(ellipse 75% 45% at 80% 0%, rgba(201, 138, 44, 0.16), transparent 65%), var(--bg);
       color: var(--cream);
       font: 16px/1.68 'Plus Jakarta Sans', 'Hind Siliguri', system-ui, sans-serif;
+      overflow-x: clip;
     }
     a { color: var(--brass); }
     a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
@@ -315,7 +316,7 @@
       <section class="block" id="leadership" aria-labelledby="leader-heading">
         <h2 id="leader-heading">Konika Mukherjee &mdash; Executive Brand &amp; Artistic Vision</h2>
         <div class="grid-3">
-          <article class="card" style="grid-column: span 2;">
+          <article class="card" style="grid-column: 1 / -1;">
             <span class="tag">CEO, UNIVERSE INVEDORS &bull; FOUNDER, KONIKA MUSIC ACADEMY</span>
             <h3>Bridging Classical Cultural Heritage &amp; Accessible Digital Learning</h3>
             <p style="color:var(--muted);">As Chief Executive Officer of <strong>Universe Invedors</strong> and Founder of <strong>Konika Music Academy</strong>, Konika Mukherjee leads the intersection of Indian classical arts education and human-centered learning technology. Under her stewardship, Konika Music Academy pairs time-honored Guru-Shishya vocal pedagogy with accessible mobile and web practice instruments &mdash; enabling students across Kolkata, India, and the global diaspora to sustain daily Riyaz with discipline and joy.</p>
