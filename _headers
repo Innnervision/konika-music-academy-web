@@ -1,0 +1,16 @@
+/ads.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=86400
+
+/app-ads.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=86400
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'self';
+  Cache-Control: public, max-age=0, must-revalidate
