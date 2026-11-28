@@ -18,6 +18,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Konika Music Academy | Classical Vocal, Instruments &amp; Trial Classes" />
   <meta name="twitter:description" content="Founded by Konika Mukherjee (CEO, Universe Invedors). Online &amp; offline conservatory music programmes in Bengali, Hindi &amp; English." />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8436172731596367" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
@@ -119,6 +121,25 @@
       color: var(--brass); text-decoration: none; letter-spacing: 0.03em;
     }
     .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+    .kma-menu-btn { display: none; background: var(--surface); border: 1px solid var(--line); color: var(--brass); border-radius: 8px; padding: 6px 10px; font-size: 1.05rem; cursor: pointer; }
+    @media (max-width: 768px) {
+      .topbar { position: static; }
+      .nav-flex { padding: 8px 0; gap: 8px; }
+      .brand { font-size: 0.92rem; white-space: nowrap; }
+      .kma-menu-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; }
+      .nav-links { display: none; width: 100%; flex-direction: column; align-items: flex-start; padding-top: 8px; gap: 6px; border-top: 1px solid var(--line); }
+      .nav-links.open { display: flex; }
+      .nav-links a { min-height: 34px; font-size: 0.9rem; }
+      .lang-pill { min-height: 32px; padding: 4px 10px; font-size: 0.8rem; }
+    }
+    .kma-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 16px; }
+    .kma-photo-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .kma-photo-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(212,163,90,0.18); }
+    .kma-photo-card img { width: 100%; height: 240px; object-fit: cover; object-position: top center; display: block; }
+    .kma-photo-card figcaption { padding: 10px 12px; font-size: 0.84rem; color: var(--muted); }
+    .kma-leader-card { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 220px) 1fr; gap: 18px; align-items: center; }
+    @media (max-width: 640px) { .kma-leader-card { grid-template-columns: 1fr; } .kma-leader-card img { max-width: 100% !important; height: 260px; } }
+    #kmaWaveCanvas { width: 100%; height: 54px; display: block; border-radius: 10px; background: rgba(14,10,7,0.75); border: 1px solid var(--line); margin-top: 10px; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.92rem; font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
     .nav-links a:hover { color: var(--cream); }
     .lang-pill {
@@ -188,15 +209,21 @@
   <div id="conservatory-shell">
     <header class="topbar">
       <div class="wrap nav-flex">
-        <a class="brand" href="#top">&#x1F3B6; KONIKA MUSIC ACADEMY</a>
+        <a class="brand" href="#top" style="display:flex;align-items:center;gap:8px;">
+          <img src="/assets/assets/images/teacher/konika_logo.png" alt="Konika Music Academy" style="width:28px;height:28px;border-radius:6px;object-fit:cover;" />
+          <span>KONIKA MUSIC ACADEMY</span>
+        </a>
+        <button type="button" class="kma-menu-btn" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
         <nav class="nav-links" aria-label="Academy navigation">
           <a href="#riyaz-studio">Live Riyaz Tool</a>
           <a href="#courses">Courses &amp; Fees</a>
-          <a href="#leadership">Executive Brand</a>
+          <a href="#leadership">Executive Brand &amp; Gallery</a>
           <a href="#enrol">Book Trial Class</a>
-          <button type="button" class="lang-pill" data-kma-lang="en" aria-pressed="true">EN</button>
-          <button type="button" class="lang-pill" data-kma-lang="bn" aria-pressed="false">&#x09AC;&#x09BE;&#x0982;&#x09B2;&#x09BE;</button>
-          <button type="button" class="lang-pill" data-kma-lang="hi" aria-pressed="false">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</button>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button type="button" class="lang-pill" data-kma-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-pill" data-kma-lang="bn" aria-pressed="false">&#x09AC;&#x09BE;&#x0982;&#x09B2;&#x09BE;</button>
+            <button type="button" class="lang-pill" data-kma-lang="hi" aria-pressed="false">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</button>
+          </div>
         </nav>
       </div>
     </header>
@@ -244,6 +271,7 @@
             <button type="button" class="swara-btn" data-ratio="1.88775">Ni<small>Nishad</small></button>
             <button type="button" class="swara-btn" data-ratio="2">Sa&prime;<small>Taar Sa</small></button>
           </div>
+          <canvas id="kmaWaveCanvas" width="420" height="54" aria-hidden="true"></canvas>
 
           <div style="border-top:1px solid var(--line);padding-top:12px;margin-top:8px;">
             <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between;">
@@ -314,17 +342,36 @@
       </section>
 
       <section class="block" id="leadership" aria-labelledby="leader-heading">
-        <h2 id="leader-heading">Konika Mukherjee &mdash; Executive Brand &amp; Artistic Vision</h2>
+        <h2 id="leader-heading">Konika Mukherjee &mdash; Executive Brand, Rabindra Sangeet &amp; Classical Gallery</h2>
         <div class="grid-3">
-          <article class="card" style="grid-column: 1 / -1;">
-            <span class="tag">CEO, UNIVERSE INVEDORS &bull; FOUNDER, KONIKA MUSIC ACADEMY</span>
-            <h3>Bridging Classical Cultural Heritage &amp; Accessible Digital Learning</h3>
-            <p style="color:var(--muted);">As Chief Executive Officer of <strong>Universe Invedors</strong> and Founder of <strong>Konika Music Academy</strong>, Konika Mukherjee leads the intersection of Indian classical arts education and human-centered learning technology. Under her stewardship, Konika Music Academy pairs time-honored Guru-Shishya vocal pedagogy with accessible mobile and web practice instruments &mdash; enabling students across Kolkata, India, and the global diaspora to sustain daily Riyaz with discipline and joy.</p>
-            <div class="btn-row" style="margin-top:8px;">
-              <a class="btn btn-outline" href="https://company.universeinvedors.tech/" target="_blank" rel="noopener noreferrer">Universe Invedors Corporate Profile</a>
-              <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer">Verified Google Play App</a>
+          <article class="card kma-leader-card">
+            <img src="/assets/assets/images/teacher/konika_photo.jpg" alt="Konika Mukherjee — Principal Vocalist & Founder" style="width:100%;max-width:220px;aspect-ratio:4/5;object-fit:cover;object-position:top center;border-radius:12px;border:1px solid var(--line);" />
+            <div>
+              <span class="tag">CEO, UNIVERSE INVEDORS &bull; FOUNDER, KONIKA MUSIC ACADEMY</span>
+              <h3 style="margin-top:8px;">Bridging Classical Cultural Heritage, Rabindra Sangeet &amp; Digital Learning</h3>
+              <p style="color:var(--muted);">As Chief Executive Officer of <strong>Universe Invedors</strong> and Founder of <strong>Konika Music Academy</strong>, Konika Mukherjee leads the intersection of Indian classical arts education (Hindustani Khayal, Rabindra Sangeet Gitabitan tradition, Nazrul Geeti, and Bengal's rich vocal heritage) with accessible mobile and web Riyaz instruments for learners across Kolkata, India, and worldwide.</p>
+              <div class="btn-row" style="margin-top:10px;">
+                <a class="btn btn-outline" href="https://company.universeinvedors.tech/" target="_blank" rel="noopener noreferrer">Universe Invedors Corporate Profile</a>
+                <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=com.universeinvedors.konikamusicacademy" target="_blank" rel="noopener noreferrer">Verified Google Play App</a>
+              </div>
             </div>
           </article>
+        </div>
+        <div class="kma-gallery">
+          <figure class="kma-photo-card">
+            <img src="/assets/assets/gallery/bridal_singer.jpg" alt="Konika Mukherjee Classical & Cultural Vocal Performance" loading="lazy" />
+            <figcaption><strong>Traditional Vocal Recital</strong> &mdash; Hindustani Classical &amp; Rabindra Sangeet</figcaption>
+          </figure>
+          <figure class="kma-photo-card">
+            <img src="/assets/assets/gallery/gallery_2.jpg" alt="Konika Music Academy Stage & Cultural Heritage" loading="lazy" />
+            <figcaption><strong>Live Cultural Stage</strong> &mdash; Bengal Musical Heritage &amp; Devotional Repertoire</figcaption>
+          </figure>
+          <figure class="kma-photo-card">
+            <img src="/assets/assets/gallery/gallery_3.jpg" alt="Konika Music Academy Conservatory Session" loading="lazy" />
+            <figcaption><strong>Conservatory Mentorship</strong> &mdash; Guru-Shishya Voice &amp; Harmonium Training</figcaption>
+          </figure>
+        </div>
+        <div class="grid-3" style="margin-top:18px;">
           <article class="card">
             <span class="tag">INSTITUTIONAL STANDARDS</span>
             <h3>Child Safety &amp; Academic Integrity</h3>
@@ -341,6 +388,14 @@
             <div>
               <label for="kmaName">Student / Contact Name *</label>
               <input id="kmaName" required placeholder="e.g., Rituparna Sen" />
+            </div>
+            <div>
+              <label for="kmaEmail">Email Address *</label>
+              <input id="kmaEmail" type="email" required placeholder="e.g., parent@example.com" />
+            </div>
+            <div>
+              <label for="kmaPhone">Phone / WhatsApp Number *</label>
+              <input id="kmaPhone" type="tel" required placeholder="e.g., +91 98300 00000" />
             </div>
             <div>
               <label for="kmaType">Enquiry Type *</label>
@@ -382,6 +437,7 @@
           </label>
           <div class="btn-row" style="margin-top:12px;">
             <button type="submit" class="btn btn-brass">Send Trial / Enrolment Request</button>
+            <a class="btn btn-outline" href="https://wa.me/918918487914?text=Namaskar%20Konika%20Music%20Academy%2C%20I%20would%20like%20to%20book%20a%20trial%20music%20class." target="_blank" rel="noopener">WhatsApp Admissions</a>
             <a class="btn btn-outline" href="mailto:contact@universeinvedors.tech?subject=Konika%20Music%20Academy%20Enquiry">Email Admissions Desk</a>
           </div>
           <p id="kmaStatus" style="color:#6ee7b7;font-size:0.9rem;display:none;" aria-live="polite"></p>
@@ -565,17 +621,39 @@
       window.submitKmaEnquiry = function (e) {
         e.preventDefault();
         const name = document.getElementById("kmaName").value.trim();
+        const email = document.getElementById("kmaEmail").value.trim();
+        const phone = document.getElementById("kmaPhone").value.trim();
         const type = document.getElementById("kmaType").value;
         const course = document.getElementById("kmaCourse").value;
         const mode = document.getElementById("kmaMode").value;
         const notes = document.getElementById("kmaNotes").value.trim();
         const body = "Namaskar Konika Music Academy,\n\n" +
-          "Enquiry Type: " + type + "\nStudent / Contact: " + name + "\nProgramme: " + course + "\nMode & Language: " + mode +
+          "Enquiry Type: " + type + "\nStudent / Contact: " + name + "\nEmail: " + email + "\nPhone / WhatsApp: " + phone +
+          "\nProgramme: " + course + "\nMode & Language: " + mode +
           (notes ? "\nDetails: " + notes : "") + "\nGuardian Consent Verified: Yes";
         const st = document.getElementById("kmaStatus");
         st.style.display = "block";
-        st.textContent = "Opening your pre-filled trial/enrolment request...";
-        window.location.href = "mailto:contact@universeinvedors.tech?subject=" + encodeURIComponent("Konika Music Academy — " + type + " (" + name + ")") + "&body=" + encodeURIComponent(body);
+        st.textContent = "Submitting your trial/enrolment request...";
+        fetch("https://universeinvedors.tech/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            subject: "Konika Music Academy — " + type + " (" + course + ")",
+            service: "Konika Music Academy",
+            message: body
+          })
+        }).then(function (r) { return r.json(); }).then(function (d) {
+          if (d && d.success) {
+            st.textContent = "Enquiry received! Our admissions desk will reach out on WhatsApp/email shortly.";
+          } else {
+            window.location.href = "https://wa.me/918918487914?text=" + encodeURIComponent(body);
+          }
+        }).catch(function () {
+          window.location.href = "mailto:contact@universeinvedors.tech?subject=" + encodeURIComponent("Konika Music Academy — " + type + " (" + name + ")") + "&body=" + encodeURIComponent(body);
+        });
       };
 
       let flutterBooted = false;
@@ -588,6 +666,28 @@
         s.async = true;
         document.body.appendChild(s);
       };
+
+      const wc = document.getElementById("kmaWaveCanvas");
+      if (wc && wc.getContext) {
+        const wctx = wc.getContext("2d");
+        let wt = 0;
+        (function drawWave() {
+          wt += 0.055;
+          const w = wc.width, h = wc.height;
+          wctx.clearRect(0, 0, w, h);
+          const active = droneOn || document.querySelector(".swara-btn.active") || talaTimer;
+          const amp = active ? 16 : 5;
+          wctx.lineWidth = 2;
+          wctx.strokeStyle = active ? "#f5c842" : "rgba(212,163,90,0.45)";
+          wctx.beginPath();
+          for (let x = 0; x <= w; x += 4) {
+            const y = h / 2 + Math.sin(x * 0.035 + wt) * amp * Math.sin(x / w * Math.PI) + Math.cos(x * 0.07 - wt * 1.4) * (amp * 0.35);
+            if (x === 0) wctx.moveTo(x, y); else wctx.lineTo(x, y);
+          }
+          wctx.stroke();
+          requestAnimationFrame(drawWave);
+        })();
+      }
     })();
   </script>
 </body>
